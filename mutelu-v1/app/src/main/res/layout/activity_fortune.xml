@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- LinearLayout to arrange the toolbar title and the FloatingActionButton -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="16dp">
+
+            <!-- FloatingActionButton for Back (Circular Button) -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_backtohome"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:contentDescription="@string/back"
+                android:src="@drawable/back"
+                app:backgroundTint="@color/white" />
+
+            <!-- TextView for the toolbar title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="@dimen/no3" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- LinearLayout for Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:gravity="center"
+        android:paddingTop="10dp"> <!-- เพิ่มระยะห่างจาก toolbar เพื่อให้ content ไม่ชิดขอบบน -->
+
+        <!-- VideoView -->
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/no1" />
+
+        <!-- TextView for "เขย่าเซียมซี" -->
+        <TextView
+            android:id="@+id/text_shake_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/shake_for_fortune"
+            android:textSize="@dimen/no4"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</RelativeLayout>

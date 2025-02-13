@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">siamsee</string>
+    <string name="app_topic">เซียมซีทำนายโชค</string>
+    <string name="back">ย้อนกลับ</string>
+    <string name="btn_siamsee">เปิดเสี่ยงเซียมซี</string>
+    <string name="shake_for_fortune">เขย่าโทรศัพท์เพื่อเสี่ยงเซียมซี</string>
+
+</resources>

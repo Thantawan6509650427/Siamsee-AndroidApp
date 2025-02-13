@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_topic"
+            android:textColor="@color/white"
+            android:textSize="@dimen/no3"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- ImageView -->
+    <ImageView
+        android:id="@+id/imgSiamSee"
+        android:layout_width="@dimen/no2"
+        android:layout_height="@dimen/no2"
+        android:src="@drawable/siamsee"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btnOpenFortune"
+        android:layout_marginBottom="30dp"
+        tools:ignore="ContentDescription" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btnOpenFortune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/btn_siamsee" />
+
+</RelativeLayout>
